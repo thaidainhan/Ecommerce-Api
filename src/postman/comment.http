@@ -1,0 +1,52 @@
+@url_dev = http://localhost:3052/v1/api/comment
+
+### create comment
+POST {{url_dev}}/
+Content-Type: application/json
+x-api-key:c94ed4180d830515a1f26d01f41c26022686b2fa10aa050cfd33e2e0709358f3c2f8710087e17885c5dfd92c043df8200850649cba0780ca786fca0f55dd73a2
+x-client-id:6553269ba21d0a07b0cd7108
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTUzMjY5YmEyMWQwYTA3YjBjZDcxMDgiLCJlbWFpbCI6InRoYWlkYWluaGFuQGdtYWlsLmNvbSIsImlhdCI6MTcwNTQ4MDA1MywiZXhwIjoxNzA1NjUyODUzfQ.-lYGGccMeaV_NftK6VjXFtFHFphzXXKVLw_riGHVfvQ
+
+{
+  "productId": "655863d70143aa400c4f84fa",
+  "userId": 1001,
+  "content": "Comment 1.2.2",
+  "parentCommentId": "65a79ee7cf7764bbb122ae73"
+}
+
+
+
+### get comment root
+GET {{url_dev}}/?productId=655863d70143aa400c4f84fa
+Content-Type: application/json
+x-api-key:c94ed4180d830515a1f26d01f41c26022686b2fa10aa050cfd33e2e0709358f3c2f8710087e17885c5dfd92c043df8200850649cba0780ca786fca0f55dd73a2
+x-client-id:6553269ba21d0a07b0cd7108
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTUzMjY5YmEyMWQwYTA3YjBjZDcxMDgiLCJlbWFpbCI6InRoYWlkYWluaGFuQGdtYWlsLmNvbSIsImlhdCI6MTcwNTQ4MDA1MywiZXhwIjoxNzA1NjUyODUzfQ.-lYGGccMeaV_NftK6VjXFtFHFphzXXKVLw_riGHVfvQ
+
+{
+
+}
+
+### get comment by id
+GET {{url_dev}}/?productId=655863d70143aa400c4f84fa&parentCommentId=65a79ee7cf7764bbb122ae73
+Content-Type: application/json
+x-api-key:c94ed4180d830515a1f26d01f41c26022686b2fa10aa050cfd33e2e0709358f3c2f8710087e17885c5dfd92c043df8200850649cba0780ca786fca0f55dd73a2
+x-client-id:6553269ba21d0a07b0cd7108
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTUzMjY5YmEyMWQwYTA3YjBjZDcxMDgiLCJlbWFpbCI6InRoYWlkYWluaGFuQGdtYWlsLmNvbSIsImlhdCI6MTcwNTQ4MDA1MywiZXhwIjoxNzA1NjUyODUzfQ.-lYGGccMeaV_NftK6VjXFtFHFphzXXKVLw_riGHVfvQ
+
+{
+
+}
+
+### delete comments by id
+DELETE  {{url_dev}}/
+Content-Type: application/json
+x-api-key:c94ed4180d830515a1f26d01f41c26022686b2fa10aa050cfd33e2e0709358f3c2f8710087e17885c5dfd92c043df8200850649cba0780ca786fca0f55dd73a2
+x-client-id:6553269ba21d0a07b0cd7108
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTUzMjY5YmEyMWQwYTA3YjBjZDcxMDgiLCJlbWFpbCI6InRoYWlkYWluaGFuQGdtYWlsLmNvbSIsImlhdCI6MTcwNTQ4MDA1MywiZXhwIjoxNzA1NjUyODUzfQ.-lYGGccMeaV_NftK6VjXFtFHFphzXXKVLw_riGHVfvQ
+
+{
+    "commentId": "65a79ee7cf7764bbb122ae73",
+    "productId": "655863d70143aa400c4f84fa"
+}
+

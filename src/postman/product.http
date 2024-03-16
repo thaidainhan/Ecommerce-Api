@@ -1,0 +1,106 @@
+@url_dev = http://localhost:3052/v1/api/product
+
+### create product
+POST {{url_dev}}/
+Content-Type: application/json
+x-api-key:c94ed4180d830515a1f26d01f41c26022686b2fa10aa050cfd33e2e0709358f3c2f8710087e17885c5dfd92c043df8200850649cba0780ca786fca0f55dd73a2
+x-client-id:6553269ba21d0a07b0cd7108
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTUzMjY5YmEyMWQwYTA3YjBjZDcxMDgiLCJlbWFpbCI6InRoYWlkYWluaGFuQGdtYWlsLmNvbSIsImlhdCI6MTcwNTU2NDI1NiwiZXhwIjoxNzA1NzM3MDU2fQ.M8uSRYZLlabLeXAd34xRhVR4Hj0g-YqDgVTSHee6ESY
+
+{
+    "product_name":"Product 003",
+    "product_description":"Áo thun nam",
+    "product_price":  600,
+    "product_shop": "6553269ba21d0a07b0cd7108",
+    "product_type": "Clothing",
+    "product_thumb": "product_thumb",
+    "product_quantity": 777,
+    "product_attributes": {
+        "brand": "Băng Quấn Bảo Vệ",
+        "size": "Băng Quấn Bảo Vệ",
+        "material": "Winter"
+    }
+}
+
+
+### update product
+PATCH  {{url_dev}}/65578ea7a7ec3b362f055d6f
+Content-Type: application/json
+x-api-key:c94ed4180d830515a1f26d01f41c26022686b2fa10aa050cfd33e2e0709358f3c2f8710087e17885c5dfd92c043df8200850649cba0780ca786fca0f55dd73a2
+x-client-id:6553269ba21d0a07b0cd7108
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTUzMjY5YmEyMWQwYTA3YjBjZDcxMDgiLCJlbWFpbCI6InRoYWlkYWluaGFuQGdtYWlsLmNvbSIsImlhdCI6MTcwMDIzNDc3NCwiZXhwIjoxNzAwNDA3NTc0fQ.3QhyOEQzLd6_bS6lIMeYwI6rYgCvlU4TP-ChhCRN7aA
+
+{   
+    "product_type":"Clothing",
+    "product_name":"Băng Quấn Bảo Vệ",
+    "product_description":"Áo thun",
+    "product_price":  null,
+    "product_quantity": 999999,
+    "product_attributes": {
+        "brand": "Băng Quấn Bảo Vệ Brand 2",
+        "size": "XL"
+    }
+}
+
+### publish product
+PUT {{url_dev}}/publish/655863d70143aa400c4f84fa
+Content-Type: application/json
+x-api-key:c94ed4180d830515a1f26d01f41c26022686b2fa10aa050cfd33e2e0709358f3c2f8710087e17885c5dfd92c043df8200850649cba0780ca786fca0f55dd73a2
+x-client-id:6553269ba21d0a07b0cd7108
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTUzMjY5YmEyMWQwYTA3YjBjZDcxMDgiLCJlbWFpbCI6InRoYWlkYWluaGFuQGdtYWlsLmNvbSIsImlhdCI6MTcwMTI0MTMyMywiZXhwIjoxNzAxNDE0MTIzfQ.t39EN0Ea6z5WuXV5U15lv3Tjb5Kv9FO97_SeL9UnCkw
+
+{
+
+}
+
+### un publish product
+PUT {{url_dev}}/unPublish/65559d7c599c698d08752c89
+Content-Type: application/json
+x-api-key:c94ed4180d830515a1f26d01f41c26022686b2fa10aa050cfd33e2e0709358f3c2f8710087e17885c5dfd92c043df8200850649cba0780ca786fca0f55dd73a2
+x-client-id:6553269ba21d0a07b0cd7108
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTUzMjY5YmEyMWQwYTA3YjBjZDcxMDgiLCJlbWFpbCI6InRoYWlkYWluaGFuQGdtYWlsLmNvbSIsImlhdCI6MTcwMDAyMzEzMSwiZXhwIjoxNzAwMTk1OTMxfQ.PKJME-00c5hCKKbdJsIxvVY0Su725Fz9FIFWB91JLjw
+
+{
+    
+}
+
+### get all published for shop
+GET {{url_dev}}/published/all
+Content-Type: application/json
+x-api-key:c94ed4180d830515a1f26d01f41c26022686b2fa10aa050cfd33e2e0709358f3c2f8710087e17885c5dfd92c043df8200850649cba0780ca786fca0f55dd73a2
+x-client-id:6553269ba21d0a07b0cd7108
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTUzMjY5YmEyMWQwYTA3YjBjZDcxMDgiLCJlbWFpbCI6InRoYWlkYWluaGFuQGdtYWlsLmNvbSIsImlhdCI6MTcwNTQ4MDA1MywiZXhwIjoxNzA1NjUyODUzfQ.-lYGGccMeaV_NftK6VjXFtFHFphzXXKVLw_riGHVfvQ
+
+{
+ 
+}
+
+### get all drafts for shop
+GET {{url_dev}}/drafts/all
+Content-Type: application/json
+x-api-key:c94ed4180d830515a1f26d01f41c26022686b2fa10aa050cfd33e2e0709358f3c2f8710087e17885c5dfd92c043df8200850649cba0780ca786fca0f55dd73a2
+x-client-id:6553269ba21d0a07b0cd7108
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTUzMjY5YmEyMWQwYTA3YjBjZDcxMDgiLCJlbWFpbCI6InRoYWlkYWluaGFuQGdtYWlsLmNvbSIsImlhdCI6MTcwMDAyMzEzMSwiZXhwIjoxNzAwMTk1OTMxfQ.PKJME-00c5hCKKbdJsIxvVY0Su725Fz9FIFWB91JLjw
+
+{
+ 
+}
+
+
+### get list search product
+GET {{url_dev}}/search/product
+Content-Type: application/json
+x-api-key:c94ed4180d830515a1f26d01f41c26022686b2fa10aa050cfd33e2e0709358f3c2f8710087e17885c5dfd92c043df8200850649cba0780ca786fca0f55dd73a2
+
+
+
+### get list product
+GET {{url_dev}}/
+Content-Type: application/json
+x-api-key:c94ed4180d830515a1f26d01f41c26022686b2fa10aa050cfd33e2e0709358f3c2f8710087e17885c5dfd92c043df8200850649cba0780ca786fca0f55dd73a2
+
+ 
+### get one product
+GET {{url_dev}}/6556ed4e6241d26524a46a7f
+Content-Type: application/json
+x-api-key:c94ed4180d830515a1f26d01f41c26022686b2fa10aa050cfd33e2e0709358f3c2f8710087e17885c5dfd92c043df8200850649cba0780ca786fca0f55dd73a2

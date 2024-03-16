@@ -1,0 +1,48 @@
+@url_dev = http://localhost:3052/v1/api/shop
+
+### signup
+POST {{url_dev}}/signup
+Content-Type: application/json
+x-api-key:c94ed4180d830515a1f26d01f41c26022686b2fa10aa050cfd33e2e0709358f3c2f8710087e17885c5dfd92c043df8200850649cba0780ca786fca0f55dd73a2
+
+{   
+    "name": "kenji2",
+    "email": "thaidainhan2@gmail.com",
+    "password": "password2"
+}
+
+# {   
+#     "name": "kenji",  
+#     "email": "thaidainhan@gmail.com",
+#     "password": "password"
+# }
+
+### login
+POST {{url_dev}}/login
+Content-Type: application/json
+x-api-key:c94ed4180d830515a1f26d01f41c26022686b2fa10aa050cfd33e2e0709358f3c2f8710087e17885c5dfd92c043df8200850649cba0780ca786fca0f55dd73a2
+
+{   
+    "email": "thaidainhan@gmail.com",
+    "password": "password"
+}
+
+
+# {   
+#     "email": "thaidainhan@gmail.com",
+#     "password": "password"
+# }
+
+### logout
+POST {{url_dev}}/logout
+Content-Type: application/json
+x-api-key:c94ed4180d830515a1f26d01f41c26022686b2fa10aa050cfd33e2e0709358f3c2f8710087e17885c5dfd92c043df8200850649cba0780ca786fca0f55dd73a2
+x-client-id:6553269ba21d0a07b0cd7108
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTUzMjY5YmEyMWQwYTA3YjBjZDcxMDgiLCJlbWFpbCI6InRoYWlkYWluaGFuQGdtYWlsLmNvbSIsImlhdCI6MTY5OTk3Mzc2MywiZXhwIjoxNzAwMTQ2NTYzfQ.xqCoOuoJBNMdDZoVNmcnqtVschiYw56vGp-K8ZqAOqU
+
+### handler refresh token
+POST {{url_dev}}/handlerRefreshToken
+Content-Type: application/json
+x-api-key:c94ed4180d830515a1f26d01f41c26022686b2fa10aa050cfd33e2e0709358f3c2f8710087e17885c5dfd92c043df8200850649cba0780ca786fca0f55dd73a2
+x-client-id:6553269ba21d0a07b0cd7108
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTUzMjY5YmEyMWQwYTA3YjBjZDcxMDgiLCJlbWFpbCI6InRoYWlkYWluaGFuQGdtYWlsLmNvbSIsImlhdCI6MTcwMDAyMzA4OCwiZXhwIjoxNzAwMTk1ODg4fQ.qsilAbjoaCNihQIxwTZsbyeijgyU7U_DVqZIogCyNKc

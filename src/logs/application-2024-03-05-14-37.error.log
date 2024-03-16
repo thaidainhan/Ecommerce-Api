@@ -1,0 +1,1 @@
+2024-03-05 14:37:38 :: error :: /v1/api/profile/viewAny :: e495cc9f-6d33-47eb-8ae2-1f946620791c :: 401 - 1ms - Response: {"status":401,"now":1709624258436} :: {"message":"you don't have enough permissions..."}

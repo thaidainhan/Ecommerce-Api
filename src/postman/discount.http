@@ -1,0 +1,58 @@
+@url_dev = http://localhost:3052/v1/api/discount
+
+### create discount
+POST {{url_dev}}/
+Content-Type: application/json
+x-api-key:c94ed4180d830515a1f26d01f41c26022686b2fa10aa050cfd33e2e0709358f3c2f8710087e17885c5dfd92c043df8200850649cba0780ca786fca0f55dd73a2
+x-client-id:6553269ba21d0a07b0cd7108
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTUzMjY5YmEyMWQwYTA3YjBjZDcxMDgiLCJlbWFpbCI6InRoYWlkYWluaGFuQGdtYWlsLmNvbSIsImlhdCI6MTcwMTI0MTMyMywiZXhwIjoxNzAxNDE0MTIzfQ.t39EN0Ea6z5WuXV5U15lv3Tjb5Kv9FO97_SeL9UnCkw
+
+{     
+      "name": "Code All Percentage",
+      "code": "Tet Nguyen Dang",
+      "start_date": "2023-11-30",
+      "end_date": "2023-12-10",
+      "is_active": true,
+      "min_order_value": 200000,
+      "product_ids": [],
+      "applies_to": "all",
+      "description": "Desc",
+      "type": "percentage_amount",
+      "max_value": 30000,
+      "max_uses": 100,
+      "uses_count": 0,
+      "max_uses_per_user": 1,
+      "users_used":[],
+      "value": 30000,
+      "created_by": {}
+}
+
+
+### get discount product
+GET  {{url_dev}}/list_product_code?code=Tet Nguyen Dang&shopId=6553269ba21d0a07b0cd7108&limit=50&page=1
+Content-Type: application/json
+x-api-key:c94ed4180d830515a1f26d01f41c26022686b2fa10aa050cfd33e2e0709358f3c2f8710087e17885c5dfd92c043df8200850649cba0780ca786fca0f55dd73a2
+
+### get discount shop
+GET  {{url_dev}}/?shopId=6553269ba21d0a07b0cd7108
+x-api-key:c94ed4180d830515a1f26d01f41c26022686b2fa10aa050cfd33e2e0709358f3c2f8710087e17885c5dfd92c043df8200850649cba0780ca786fca0f55dd73a2
+x-client-id:6553269ba21d0a07b0cd7108
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTUzMjY5YmEyMWQwYTA3YjBjZDcxMDgiLCJlbWFpbCI6InRoYWlkYWluaGFuQGdtYWlsLmNvbSIsImlhdCI6MTcwMTI0MTMyMywiZXhwIjoxNzAxNDE0MTIzfQ.t39EN0Ea6z5WuXV5U15lv3Tjb5Kv9FO97_SeL9UnCkw
+
+
+### get amount
+POST  {{url_dev}}/amount
+Content-Type: application/json
+x-api-key:c94ed4180d830515a1f26d01f41c26022686b2fa10aa050cfd33e2e0709358f3c2f8710087e17885c5dfd92c043df8200850649cba0780ca786fca0f55dd73a2
+
+{
+    "codeId": "Tet Nguyen Dang",
+    "shopId": "6553269ba21d0a07b0cd7108",
+    "userId": "2",
+    "products": [{
+        "productId": "6553269ba21d0a07b0cd7108",
+        "quantity": 5,
+        "price": 200000
+    }]
+}
+
